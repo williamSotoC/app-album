@@ -1,0 +1,16 @@
+<button mat-fab color="accent" type="button" (click)="tornaIndietro('home')">Torna indietro</button>
+
+
+
+<a routerLink="/albums/{{elementoIessimoOggettoAlbum.id}}"
+
+    *ngFor="let elementoIessimoOggettoAlbum of arrayDiOggettiAlbums">
+
+
+    {{elementoIessimoOggettoAlbum.title}}
+
+</a>
+
+
+<mat-progress-spinner *ngIf="caricamentoPhotos == true" color="primary" mode="indeterminate" value="50">
+</mat-progress-spinner>

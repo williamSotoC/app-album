@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+    <!-- ! "color" è un nome di attributo ed esso mi dice qual è il colore di sfondo della nav-->
+
+
+    <div class="container">
+        <mat-icon>home</mat-icon>
+
+     
+            <!-- *opzione1 senza Angular Material-->
+
+<!--         
+            <button  [ngClass]="{'home': albumService.coloreSfondo == 'red'}" (click)="albumService.coloreSfondoSelezionato('home')">
+            
+                <a  routerLink="/home" >Home</a>
+            </button>
+            
+            <button  [ngClass]="{'albums': albumService.coloreSfondo == 'yellow'}"  (click)="albumService.coloreSfondoSelezionato('albums')">
+                <a  routerLink="/albums" >Albums</a>
+            </button> -->
+            <!-- *opzione1 senza Angular Material-->
+
+
+            
+       
+            <!-- *opzione2 usando Angular Material-->
+                <a  mat-button routerLink="/home" [ngClass]="{'home': albumService.coloreSfondo == 'red'}" (click)="albumService.coloreSfondoSelezionato('home')">Home</a>
+            
+            
+            
+                <a  mat-button routerLink="/albums" [ngClass]="{'albums': albumService.coloreSfondo == 'yellow'}"  (click)="albumService.coloreSfondoSelezionato('albums')">Albums</a>
+                <!-- *opzione2 usando Angular Material-->
+
+        
+
+    </div>
+
+
+
+</mat-toolbar>

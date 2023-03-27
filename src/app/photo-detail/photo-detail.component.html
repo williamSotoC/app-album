@@ -1,0 +1,26 @@
+<button mat-fab color="warn" type="button" (click)="tornaIndietro()">Torna indietro</button>
+
+
+<div class="containerGrid">
+    <div *ngFor="let elementoIessimoOggettoPhoto of arrayDiOggettiPhotos" class="containerFiglio">
+
+        <a [href]="elementoIessimoOggettoPhoto.url" target="_blank">
+            <img [src]="elementoIessimoOggettoPhoto.thumbnailUrl" [alt]="elementoIessimoOggettoPhoto.title">
+        </a>
+        <h3>{{elementoIessimoOggettoPhoto.title}}</h3>
+
+
+
+
+    </div>
+</div>
+
+
+<mat-progress-spinner *ngIf="caricamentoPhotos == true" color="primary" mode="indeterminate" value="50">
+</mat-progress-spinner>
+
+
+<div *ngIf="messagioDiErrore != undefined">
+
+    {{messagioDiErrore}}
+</div>
